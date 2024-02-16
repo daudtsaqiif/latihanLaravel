@@ -119,6 +119,8 @@
                             <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
                                 Sponsor
                             </a>
+
+                            <a href="{{ route('admin.index') }}" style="margin: 50px">Go To Admin</a>
                         </div>
                     </div>
 
@@ -128,5 +130,6 @@
                 </div>
             </div>
         </div>
+
     </body>
 </html>
