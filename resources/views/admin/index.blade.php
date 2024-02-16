@@ -1,5 +1,7 @@
 @extends('admin.parent');
 
 @section('content')
-ini halaman admin index
+<div class="container d-flex justify-content-end">
+    <a href="" class="btn btn-primary">Create Admin</a>
+</div>
 @endsection
