@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container d-flex justify-content-end">
-    <a href="" class="btn btn-primary">Create Admin</a>
+    <a href="{{ route('admin.create') }}" class="btn btn-primary">Create Admin</a>
 </div>
 @endsection
