@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/test', function () {
-    return view('hello');
-});
-
-route::get('/parent', function () {
-    return view('admin.parent');
-});
-
-route::resource('/about', AboutController::class);
-
-route::get('/profile-index', [ProfileController::class, 'index']) -> name('profileroute');
+// Route For AdminController With Resource
+Route::resource('admin', AdminController::class);
