@@ -2,6 +2,8 @@
 
 @section('content')
 
-ini halaman create category
+<div class="p-4">
+    <form action="" method="post"></form>
+</div>
 
 @endsection
