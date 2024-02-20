@@ -11,6 +11,8 @@ class CategoryContorller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+        //retrun kearah category.blade.php
+
     public function index()
     {
         return view('category.index');
@@ -23,7 +25,8 @@ class CategoryContorller extends Controller
      */
     public function create()
     {
-        //
+        //retrun kearah create.blade.php
+        return view('category.create');
     }
 
     /**
