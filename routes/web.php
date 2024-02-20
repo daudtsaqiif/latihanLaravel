@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BuahController;
 use App\Http\Controllers\CategoryContorller;
 
 /*
@@ -23,3 +24,5 @@ Route::get('/', function () {
 Route::resource('admin', AdminController::class);
 //route category 
 Route::resource('category', CategoryContorller::class);
+//route buah
+Route::resource('buah', BuahController::class);
