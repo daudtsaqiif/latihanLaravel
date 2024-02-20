@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Buah extends Model
 {
     use HasFactory;
+    
+    protected $fillabel = [
+        'name',
+        'slug',
+        'harga',
+        'warna'
+    ];
 }

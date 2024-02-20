@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('buahs', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->integer('harga');
+            $table->string('warna');
             $table->timestamps();
         });
     }

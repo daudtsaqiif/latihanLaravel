@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Buah;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class BuahController extends Controller
@@ -34,7 +36,21 @@ class BuahController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        //simpan data ke dalam database
+        Buah::create([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'harga' => $request->harga,
+            'warna' => $request->warna
+        ]);
+        //jika sudah maka kembalikan ke halaman category.index
+
+        
+
     }
 
     /**
