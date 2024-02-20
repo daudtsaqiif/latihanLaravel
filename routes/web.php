@@ -21,5 +21,5 @@ Route::get('/', function () {
 
 // Route For AdminController With Resource
 Route::resource('admin', AdminController::class);
-
+//route category 
 Route::resource('category', CategoryContorller::class);
