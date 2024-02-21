@@ -51,7 +51,7 @@ class BuahController extends Controller
                 'warna' => $request->warna
             ])
         ) {
-            return redirect()->route('buah.index')->with(['success'], 'data berhasil di simpan');
+            return redirect()->route('buah.index')->with(['success' => 'data berhasil di simpan']);
         } else {
             return redirect()->route('buah.create')->with(['error'], 'data gagal di simpan');
         }

@@ -52,7 +52,7 @@ class CategoryContorller extends Controller
                 'slug' => Str::slug($request->name)
             ])
         ){
-        return redirect()->route('category.index')->with(['success'], 'Data berhasil di simpan');
+        return redirect()->route('category.index')->with(['success' => 'Data berhasil di simpan']);
     } else{
         return redirect()->route('category.create')->with(['error'], 'Data Gagal Disimpan');
     }
