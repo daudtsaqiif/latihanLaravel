@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->integer('harga');
+            $table->integer('harga')->nullable();
             $table->string('warna');
             $table->timestamps();
         });
@@ -27,7 +27,7 @@ return new class extends Migration
      * Reverse the migrations.
      *
      * @return void
-     */
+     */ 
     public function down()
     {
         Schema::dropIfExists('buahs');

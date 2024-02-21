@@ -8,15 +8,19 @@
             @csrf
             @method('POST')
 
-            <div class="form mb-3">
-                <input type="text" class="form-control m-4" id="floatingInput" placeholder="nama buah" name="name">
-                <label for="floatingInput"></label>
-                
-                <input type="number" class="form-control  m-4" id="floatingInput" placeholder="harga" name="harga">
-                <label for="floatingInput"></label>
-                
-                <input type="text" class="form-control  m-4" id="floatingInput" placeholder="warna" name="warna">
-                <label for="floatingInput"></label>
+            <div class="form-floating mb-3">
+                <div class="row my-3">
+                    <label for="floatingInput">Nama buah</label>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="nama buah" name="name">
+                </div>
+                <div class="row my-3">
+                    <label for="floatingInput">Harga</label>
+                    <input type="number" class="form-control" id="floatingInput" placeholder="harga" name="harga">
+                </div>
+                <div class="row my-3">
+                    <label for="floatingInput">Warna</label>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="warna" name="warna">
+                </div>
             </div>
 
             <button type="submit" class="btn btn-primary">Create</button>

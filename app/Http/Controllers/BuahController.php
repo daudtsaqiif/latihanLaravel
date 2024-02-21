@@ -37,7 +37,8 @@ class BuahController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required',
+            'harga' => 'filled',
         ]);
 
         //simpan data ke dalam database
