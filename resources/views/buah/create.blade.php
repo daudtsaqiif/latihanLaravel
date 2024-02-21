@@ -7,13 +7,16 @@
         <form action="{{ route('buah.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('POST')
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Kesehatan" name="name">
-                <label for="floatingInput">Name Category</label>
-                <input type="number" class="form-control" id="floatingInput" placeholder="Kesehatan" name="harga">
-                <label for="floatingInput">harga</label>
-                <input type="text" class="form-control" id="floatingInput" placeholder="Kesehatan" name="warna">
-                <label for="floatingInput">warna</label>
+
+            <div class="form mb-3">
+                <input type="text" class="form-control m-4" id="floatingInput" placeholder="nama buah" name="name">
+                <label for="floatingInput"></label>
+                
+                <input type="number" class="form-control  m-4" id="floatingInput" placeholder="harga" name="harga">
+                <label for="floatingInput"></label>
+                
+                <input type="text" class="form-control  m-4" id="floatingInput" placeholder="warna" name="warna">
+                <label for="floatingInput"></label>
             </div>
 
             <button type="submit" class="btn btn-primary">Create</button>

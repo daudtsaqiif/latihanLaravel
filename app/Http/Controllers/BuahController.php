@@ -49,6 +49,7 @@ class BuahController extends Controller
         ]);
         //jika sudah maka kembalikan ke halaman category.index
 
+        return redirect()->route('buah.index');
 
     }
 
