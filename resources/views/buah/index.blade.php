@@ -8,4 +8,10 @@
     <a href="{{ route('buah.create') }}" class="btn btn-success">Buat buah</a>
 </div>
 
+@if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
 @endsection

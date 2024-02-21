@@ -2,6 +2,16 @@
 
 @section('content')
     <div class="card p-4">
+        {{-- error alert --}}
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         <h1>beli buah</h1>
         <form action="{{ route('buah.store') }}" method="post" enctype="multipart/form-data">

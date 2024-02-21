@@ -38,19 +38,27 @@ class BuahController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'harga' => 'filled',
+            'harga' => 'required',
+            'warna' => 'required'
         ]);
 
         //simpan data ke dalam database
-        Buah::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
-            'harga' => $request->harga,
-            'warna' => $request->warna
-        ]);
+        if (
+            Buah::create([
+                'name' => $request->name,
+                'slug' => Str::slug($request->name),
+                'harga' => $request->harga,
+                'warna' => $request->warna
+            ])
+        ) {
+            return redirect()->route('buah.index')->with(['success'], 'data berhasil di simpan');
+        } else {
+            return redirect()->route('buah.create')->with(['error'], 'data gagal di simpan');
+        }
+
         //jika sudah maka kembalikan ke halaman category.index
 
-        return redirect()->route('buah.index');
+
 
     }
 
