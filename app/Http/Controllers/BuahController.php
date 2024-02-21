@@ -49,7 +49,6 @@ class BuahController extends Controller
         ]);
         //jika sudah maka kembalikan ke halaman category.index
 
-        
 
     }
 
