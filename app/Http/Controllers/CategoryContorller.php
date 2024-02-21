@@ -17,7 +17,11 @@ class CategoryContorller extends Controller
 
     public function index()
     {
-        return view('category.index');
+
+        //retrun kearah index.blade.php
+        $category = Category::all();
+
+        return view('category.index', compact('category'));
     }
 
     /**
@@ -66,7 +70,9 @@ class CategoryContorller extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::findOrFail($id);
+
+        return view('category.show', compact('category'));
     }
 
     /**
@@ -100,6 +106,9 @@ class CategoryContorller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->delete();
+
+        return redirect()->route('category.index')->with(['success' => 'Data berhasil di hapus']);
     }
 }
