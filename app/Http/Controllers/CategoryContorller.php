@@ -46,14 +46,16 @@ class CategoryContorller extends Controller
         ]);
 
         //simpan data ke dalam database
-        Category::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name)
-        ]);
-        //jika sudah maka kembalikan ke halaman category.index
-
-        return redirect()->route('category.index');
-
+        if(
+            Category::create([
+                'name' => $request->name,
+                'slug' => Str::slug($request->name)
+            ])
+        ){
+        return redirect()->route('category.index')->with(['success'], 'Data berhasil di simpan');
+    } else{
+        return redirect()->route('category.create')->with(['error'], 'Data Gagal Disimpan');
+    }
     }
 
     /**
