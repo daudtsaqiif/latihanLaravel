@@ -30,6 +30,7 @@
                     <td>{{ $row->name }}</td>
                     <td>
                         <a href="{{ route('category.show', $row->id) }}" class="btn btn-info m-3">Show Category</a>
+                        <a href="{{ route('category.edit', $row->id) }}" class="btn btn-warning m-3">Update Category</a>
                         <form action="{{ route('category.destroy', $row->id) }}" method="post">
                             @csrf
                             @method('DELETE')
